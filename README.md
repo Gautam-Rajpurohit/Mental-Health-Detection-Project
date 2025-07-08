@@ -27,12 +27,12 @@ Users fill out a form-based questionnaire via a clean and responsive **HTML/CSS 
 
 ## Features
 
-- 💬 Predicts **Anxiety**, **Stress**, and **Depression** levels.
-- ✅ Uses a **multi-label classification** approach.
-- 📊 Optimized using **GridSearchCV** for better accuracy.
-- 🖥️ Fully functional and responsive **frontend UI**.
-- 🥗 Provides **personalized diet and workout plans**.
-- 🔒 Ensures **user privacy** and avoids invasive inputs.
-- 📦 Lightweight, easily deployable (supports Heroku, Render, etc.)
+- Predicts **Anxiety**, **Stress**, and **Depression** levels.
+- Uses a **multi-label classification** approach.
+- Optimized using **GridSearchCV** for better accuracy.
+- Fully functional and responsive **frontend UI**.
+- Provides **personalized diet and workout plans**.
+- Ensures **user privacy** and avoids invasive inputs.
+- Lightweight, easily deployable (supports Heroku, Render, etc.)
 
 ---
