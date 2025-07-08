@@ -1,0 +1,115 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* Background image changes */
+  background-image: url("/static/back.jpg");
+  background-size: cover;
+  /* Ensures the image covers the entire page */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  background-attachment: fixed;
+  /* Keeps the background fixed when scrolling */
+}
+
+
+.description {
+  color: white;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1.3em;
+  margin-left: 3cm;
+  margin-right: 3cm;
+}
+
+.hero-section {
+  background-size: cover;
+  max-width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-size: 4.3em;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgb(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  margin-left: 19%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* Hide overflowing content */
+}
+
+.form-section {
+  display: none;
+  /* Hide all sections initially */
+  transition: transform 0.5s ease-in-out;
+}
+
+.form-section.active {
+  display: block;
+  /* Show the active section */
+}
+
+.next {
+  background-color: #0c0c0c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 1000ms;
+}
+
+.prev {
+  background-color: #040404;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 1000ms;
+}
+
+.sub {
+  background-color: #f31414;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 1000ms;
+}
+
+.prev:hover,
+.prev:focus-visible {
+  transform: translate(-1rem);
+  transition: transform 250ms;
+}
+
+.next:hover,
+.next:focus-visible {
+  transform: translate(1rem);
+  transition: transform 250ms;
+}
+
+.sub:hover,
+.sub:focus-visible {
+  transform: translate(1rem);
+  transition: transform 250ms;
+}

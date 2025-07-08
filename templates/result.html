@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/result.css')}}">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Prediction Results</h2>
+      <div class="levels">
+        <div class="level">
+          <div class="labels">
+            <p>Anxiety Level</p>
+          </div>
+          <div class="circle1">
+            <div class="inner-circle1">
+              <!-- Content is now positioned separately and does not rotate -->
+              <div class="content">
+                <p>{{ anxiety }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="level">
+          <div class="labels">
+            <p>Stress Level</p>
+          </div>
+          <div class="circle2">
+            <div class="inner-circle2">
+              <div class="content">
+                <p>{{ stress }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="level">
+          <div class="labels">
+            <p>Depression Level</p>
+          </div>
+          <div class="circle3">
+            <div class="inner-circle3">
+              <div class="content">
+                <p>{{ depression }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="plans">
+        <p><strong>Workout Plan Details:</strong></p>
+        <div class="plan-box">
+          <p>{{ workout }}</p>
+        </div>
+        <br />
+        <p><strong>Diet Plan Details:</strong></p>
+        <div class="plan-box">
+          <p>{{ diet }}</p>
+        </div>
+      </div>
+
+      <a href="/" class="back-button">Back to Form</a>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script/result.js') }}">
+    </script>
+    
+  </body>
+</html>

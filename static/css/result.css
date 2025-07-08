@@ -1,0 +1,190 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url('/static/back3.jpg');
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-size: cover;  /* Ensures the image covers the entire page */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  background-attachment: fixed;  /* Keeps the background image fixed when scrolling */
+}
+
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(249, 251, 249, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    color: black;
+    margin-bottom: 20px;
+  }
+
+  .levels {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  .level {
+    text-align: center;
+  }
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  .circle1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    /* background-color: rgba(247, 9, 9, 0.5);  */
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s ease-in-out infinite; /* Apply pulsating animation */
+  }
+
+  .inner-circle1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    /* background-color: rgba(150, 71, 6, 0.5);  */
+    transition: background-color 0.3s ease;
+    animation: pulse 1.2s ease-in-out infinite; /* Apply pulsating animation */
+  }
+
+  .circle2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    /* background-color: rgba(200, 8, 149, 0.5);  */
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s ease-in-out infinite; /* Apply pulsating animation */
+  }
+
+  .inner-circle2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    /* background-color: rgba(32, 4, 102, 0.5);  */
+    transition: background-color 0.3s ease;
+    animation: pulse 1.2s ease-in-out infinite; /* Apply pulsating animation */
+  }
+
+  .circle3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+    /* background-color: rgba(10, 10, 10, 0.5);  */
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s ease-in-out infinite; /* Apply pulsating animation */
+  }
+
+  .inner-circle3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    /* background-color: rgba(160, 159, 158, 0.5);  */
+    transition: background-color 0.3s ease;
+    animation: pulse 1.2s ease-in-out infinite; /* Apply pulsating animation */
+  }
+
+  .content {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff; /* Example content styling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Keep it positioned in the center */
+    z-index: 1; /* Ensure it stays above the pulsating circles */
+  }
+
+  .labels {
+    font-size: 20px;
+    color: black;
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .plan-box {
+    width: 90%;
+    background-color: #f5f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    color: #161d6f;
+  }
+
+  p {
+    color: #060606;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0b2f9f;
+    font-size: 18px;
+  }
+
+  a:hover {
+    color: #fcfafa;
+  }
+
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fbfdfd;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .back-button:hover {
+    background-color: #050202;
+  }

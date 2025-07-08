@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  </head>
+  <body>
+    <h1 class="hero-section">
+      <b>Student Mental Health System</b>
+    </h1>
+
+    <p class="description">
+      This system helps identify and analyze mental health patterns among
+      students based on common anxiety, stress, and depression symptoms related
+      to academic pressure.
+    </p>
+    <br />
+    <div class="form-container">
+      <form action="/predict" method="POST" id="multi-step-form">
+        <div id="form-error" style="color: red; display: none;"></div>
+        <div class="form-section active" id="section1">
+          <h2>Anxiety-related Questions</h2>
+          <label
+            >1. In a semester, how often you felt nervous, anxious or on edge
+            due to academic pressure?</label
+          ><br />
+          <input type="radio" name="anxiety1" value="1" /> 1
+          <input type="radio" name="anxiety1" value="2" /> 2
+          <input type="radio" name="anxiety1" value="3" /> 3
+          <input type="radio" name="anxiety1" value="4" /> 4
+          <input type="radio" name="anxiety1" value="5" /> 5<br /><br />
+
+          <label
+            >2. In a semester, how often have you been unable to stop worrying
+            about your academic affairs?</label
+          ><br />
+          <input type="radio" name="anxiety2" value="1" /> 1
+          <input type="radio" name="anxiety2" value="2" /> 2
+          <input type="radio" name="anxiety2" value="3" /> 3
+          <input type="radio" name="anxiety2" value="4" /> 4
+          <input type="radio" name="anxiety2" value="5" /> 5<br /><br />
+
+          <label
+            >3. In a semester, how often have you had trouble relaxing due to
+            academic pressure?</label
+          ><br />
+          <input type="radio" name="anxiety3" value="1" /> 1
+          <input type="radio" name="anxiety3" value="2" /> 2
+          <input type="radio" name="anxiety3" value="3" /> 3
+          <input type="radio" name="anxiety3" value="4" /> 4
+          <input type="radio" name="anxiety3" value="5" /> 5<br /><br />
+
+          <label
+            >4. In a semester, how often have you been easily annoyed or
+            irritated because of academic pressure?</label
+          ><br />
+          <input type="radio" name="anxiety4" value="1" /> 1
+          <input type="radio" name="anxiety4" value="2" /> 2
+          <input type="radio" name="anxiety4" value="3" /> 3
+          <input type="radio" name="anxiety4" value="4" /> 4
+          <input type="radio" name="anxiety4" value="5" /> 5<br /><br />
+
+          <label
+            >5. In a semester, how often have you worried too much about
+            academic affairs?</label
+          ><br />
+          <input type="radio" name="anxiety5" value="1" /> 1
+          <input type="radio" name="anxiety5" value="2" /> 2
+          <input type="radio" name="anxiety5" value="3" /> 3
+          <input type="radio" name="anxiety5" value="4" /> 4
+          <input type="radio" name="anxiety5" value="5" /> 5<br /><br />
+
+          <label
+            >6. In a semester, how often have you been so restless due to
+            academic pressure that it is hard to sit still?</label
+          ><br />
+          <input type="radio" name="anxiety6" value="1" /> 1
+          <input type="radio" name="anxiety6" value="2" /> 2
+          <input type="radio" name="anxiety6" value="3" /> 3
+          <input type="radio" name="anxiety6" value="4" /> 4
+          <input type="radio" name="anxiety6" value="5" /> 5<br /><br />
+
+          <label
+            >7. In a semester, how often have you felt afraid, as if something
+            awful might happen?</label
+          ><br />
+          <input type="radio" name="anxiety7" value="1" /> 1
+          <input type="radio" name="anxiety7" value="2" /> 2
+          <input type="radio" name="anxiety7" value="3" /> 3
+          <input type="radio" name="anxiety7" value="4" /> 4
+          <input type="radio" name="anxiety7" value="5" /> 5<br /><br />
+          <button type="button" class="next">Next</button>
+        </div>
+
+        <div class="form-section" id="section2">
+          <h2>Stress-related Questions</h2>
+          <label
+            >1. In a semester, how often have you felt upset due to something
+            that happened in your academic affairs?</label
+          ><br />
+          <input type="radio" name="stress1" value="1" /> 1
+          <input type="radio" name="stress1" value="2" /> 2
+          <input type="radio" name="stress1" value="3" /> 3
+          <input type="radio" name="stress1" value="4" /> 4
+          <input type="radio" name="stress1" value="5" /> 5<br /><br />
+
+          <label
+            >2. In a semester, how often you felt as if you were unable to
+            control important things in your academic affairs?</label
+          ><br />
+          <input type="radio" name="stress2" value="1" /> 1
+          <input type="radio" name="stress2" value="2" /> 2
+          <input type="radio" name="stress2" value="3" /> 3
+          <input type="radio" name="stress2" value="4" /> 4
+          <input type="radio" name="stress2" value="5" /> 5<br /><br />
+
+          <label
+            >3. In a semester, how often you felt nervous and stressed because
+            of academic pressure?</label
+          ><br />
+          <input type="radio" name="stress3" value="1" /> 1
+          <input type="radio" name="stress3" value="2" /> 2
+          <input type="radio" name="stress3" value="3" /> 3
+          <input type="radio" name="stress3" value="4" /> 4
+          <input type="radio" name="stress3" value="5" /> 5<br /><br />
+
+          <label
+            >4. In a semester, how often you felt as if you could not cope with
+            all the mandatory academic activities?</label
+          ><br />
+          <input type="radio" name="stress4" value="1" /> 1
+          <input type="radio" name="stress4" value="2" /> 2
+          <input type="radio" name="stress4" value="3" /> 3
+          <input type="radio" name="stress4" value="4" /> 4
+          <input type="radio" name="stress4" value="5" /> 5<br /><br />
+
+          <label
+            >5. In a semester, how often you felt confident about your ability
+            to handle your academic/university problems?</label
+          ><br />
+          <input type="radio" name="stress5" value="1" /> 1
+          <input type="radio" name="stress5" value="2" /> 2
+          <input type="radio" name="stress5" value="3" /> 3
+          <input type="radio" name="stress5" value="4" /> 4
+          <input type="radio" name="stress5" value="5" /> 5<br /><br />
+
+          <label
+            >6. In a semester, how often you felt as if things in your academic
+            life are going your way?</label
+          ><br />
+          <input type="radio" name="stress6" value="1" /> 1
+          <input type="radio" name="stress6" value="2" /> 2
+          <input type="radio" name="stress6" value="3" /> 3
+          <input type="radio" name="stress6" value="0" /> 4
+          <input type="radio" name="stress6" value="0" /> 5<br /><br />
+
+          <label
+            >7. In a semester, how often are you able to control irritations in
+            your academic / university affairs?</label
+          ><br />
+          <input type="radio" name="stress7" value="1" /> 1
+          <input type="radio" name="stress7" value="2" /> 2
+          <input type="radio" name="stress7" value="3" /> 3
+          <input type="radio" name="stress7" value="4" /> 4
+          <input type="radio" name="stress7" value="5" /> 5<br /><br />
+
+          <label
+            >8. In a semester, how often you felt as if your academic
+            performance was on top?</label
+          ><br />
+          <input type="radio" name="stress8" value="1" /> 1
+          <input type="radio" name="stress8" value="2" /> 2
+          <input type="radio" name="stress8" value="3" /> 3
+          <input type="radio" name="stress8" value="4" /> 4
+          <input type="radio" name="stress8" value="5" /> 5<br /><br />
+
+          <label
+            >9. In a semester, how often you got angered due to bad performance
+            or low grades beyond your control?</label
+          ><br />
+          <input type="radio" name="stress9" value="1" /> 1
+          <input type="radio" name="stress9" value="2" /> 2
+          <input type="radio" name="stress9" value="3" /> 3
+          <input type="radio" name="stress9" value="4" /> 4
+          <input type="radio" name="stress9" value="5" /> 5<br /><br />
+
+          <label
+            >10. In a semester, how often you felt as if academic difficulties
+            are piling up so high that you could not overcome them?</label
+          ><br />
+          <input type="radio" name="stress10" value="1" /> 1
+          <input type="radio" name="stress10" value="2" /> 2
+          <input type="radio" name="stress10" value="3" /> 3
+          <input type="radio" name="stress10" value="4" /> 4
+          <input type="radio" name="stress10" value="5" /> 5<br /><br />
+          <button type="button" class="prev">Back</button>
+          <button type="button" class="next">Next</button>
+        </div>
+
+        <div class="form-section" id="section3">
+          <h2>Depression-related Questions</h2>
+          <label
+            >1. In a semester, how often have you had little interest or
+            pleasure in doing things?</label
+          ><br />
+          <input type="radio" name="depression1" value="1" /> 1
+          <input type="radio" name="depression1" value="2" /> 2
+          <input type="radio" name="depression1" value="3" /> 3
+          <input type="radio" name="depression1" value="4" /> 4
+          <input type="radio" name="depression1" value="5" /> 5<br /><br />
+
+          <label
+            >2. In a semester, how often have you been feeling down, depressed
+            or hopeless?</label
+          ><br />
+          <input type="radio" name="depression2" value="1" /> 1
+          <input type="radio" name="depression2" value="2" /> 2
+          <input type="radio" name="depression2" value="3" /> 3
+          <input type="radio" name="depression2" value="4" /> 4
+          <input type="radio" name="depression2" value="5" /> 5<br /><br />
+
+          <label
+            >3. In a semester, how often have you had trouble falling or staying
+            asleep, or sleeping too much?</label
+          ><br />
+          <input type="radio" name="depression3" value="1" /> 1
+          <input type="radio" name="depression3" value="2" /> 2
+          <input type="radio" name="depression3" value="3" /> 3
+          <input type="radio" name="depression3" value="4" /> 4
+          <input type="radio" name="depression3" value="5" /> 5<br /><br />
+
+          <label
+            >4. In a semester, how often have you been feeling tired or having
+            little energy?</label
+          ><br />
+          <input type="radio" name="depression4" value="1" /> 1
+          <input type="radio" name="depression4" value="2" /> 2
+          <input type="radio" name="depression4" value="3" /> 3
+          <input type="radio" name="depression4" value="4" /> 4
+          <input type="radio" name="depression4" value="5" /> 5<br /><br />
+
+          <label
+            >5. In a semester, how often have you had poor appetite or
+            overeating?</label
+          ><br />
+          <input type="radio" name="depression5" value="1" /> 1
+          <input type="radio" name="depression5" value="2" /> 2
+          <input type="radio" name="depression5" value="3" /> 3
+          <input type="radio" name="depression5" value="4" /> 4
+          <input type="radio" name="depression5" value="5" /> 5<br /><br />
+
+          <label
+            >6. In a semester, how often have you been feeling bad about
+            yourself?</label
+          ><br />
+          <input type="radio" name="depression6" value="1" /> 1
+          <input type="radio" name="depression6" value="2" /> 2
+          <input type="radio" name="depression6" value="3" /> 3
+          <input type="radio" name="depression6" value="4" /> 4
+          <input type="radio" name="depression6" value="5" /> 5<br /><br />
+
+          <label
+            >7. In a semester, how often have you been having trouble
+            concentrating on things?</label
+          ><br />
+          <input type="radio" name="depression7" value="1" /> 1
+          <input type="radio" name="depression7" value="2" /> 2
+          <input type="radio" name="depression7" value="3" /> 3
+          <input type="radio" name="depression7" value="4" /> 4
+          <input type="radio" name="depression7" value="5" /> 5<br /><br />
+
+          <label
+            >8. In a semester, how often have you moved or spoke too slowly or
+            been restless?</label
+          ><br />
+          <input type="radio" name="depression8" value="1" /> 1
+          <input type="radio" name="depression8" value="2" /> 2
+          <input type="radio" name="depression8" value="3" /> 3
+          <input type="radio" name="depression8" value="4" /> 4
+          <input type="radio" name="depression8" value="5" /> 5<br /><br />
+
+          <label
+            >9. In a semester, how often have you had thoughts of hurting
+            yourself?</label
+          ><br />
+          <input type="radio" name="depression9" value="1" /> 1
+          <input type="radio" name="depression9" value="2" /> 2
+          <input type="radio" name="depression9" value="3" /> 3
+          <input type="radio" name="depression9" value="4" /> 4
+          <input type="radio" name="depression9" value="5" /> 5<br /><br />
+          <button type="button" class="prev">Back</button>
+          <button type="submit" class="sub">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='script/script.js') }}">
+    </script>
+    </script>
+  </body>
+</html>
